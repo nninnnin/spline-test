@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .button-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button-container > button {
+        margin: 0 10px;
+        padding: 6px 10px;
+        background-color: white;
+        color: violet;
+
+        border: none;
+        border: 1px solid violet;
+      }
+
+      .button-container > button:hover {
+        background-color: lightgray;
+      }
+
+      .button-container > button:active {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas3d"></canvas>
+
+    <div class="button-container">
+      <button data-characterid="1">1번 줌</button>
+      <button data-characterid="2">2번 줌</button>
+      <button data-characterid="3">3번 줌</button>
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+
+    <script>
+      const canvas = document.querySelector("canvas");
+
+      console.log(canvas);
+    </script>
+  </body>
+</html>
